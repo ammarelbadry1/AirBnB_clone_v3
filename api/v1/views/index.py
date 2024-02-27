@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This module contains endpoint the check the status"""
 from flask import jsonify
-from . import app_views
+from api.v1.views import app_views
 
 
 @app_views.route("/status")
