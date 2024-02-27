@@ -12,6 +12,7 @@ app.register_blueprint(app_views, url_prefix="/api/v1")
 
 @app.teardown_appcontext
 def close_storage(exception):
+    """close the connection to the storage engine after each req"""
     storage.close()
 
 
